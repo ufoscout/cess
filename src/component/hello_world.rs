@@ -23,7 +23,7 @@ impl Component for App {
     }
     
     fn change(&mut self, _props: Self::Properties) -> ShouldRender {
-        true
+        false
     }
 
     

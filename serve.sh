@@ -1,1 +1,3 @@
-python3 -m http.server 8080
+# To install miniserve:
+# > cargo +nightly install miniserve
+miniserve ./pkg --index index.html --port 8080

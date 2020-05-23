@@ -1,7 +1,8 @@
-mod app;
-mod utils;
-
+use yew::prelude::*;
 use wasm_bindgen::prelude::*;
+
+mod component;
+mod utils;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -9,9 +10,7 @@ use wasm_bindgen::prelude::*;
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
-#[wasm_bindgen]
-pub fn run_app() -> Result<(), JsValue> {
-    yew::start_app::<app::App>();
-
-    Ok(())
+#[wasm_bindgen(start)]
+pub fn run_app() {
+    App::<component::button::Button>::new().mount_to_body();
 }

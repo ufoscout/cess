@@ -1,3 +1,4 @@
+mod app;
 mod utils;
 
 use wasm_bindgen::prelude::*;
@@ -9,11 +10,8 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
-    fn alert(s: &str);
-}
+pub fn run_app() -> Result<(), JsValue> {
+    yew::start_app::<app::App>();
 
-#[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, yew!");
+    Ok(())
 }

@@ -3,6 +3,12 @@ name = "cess"
 version = "0.1.0"
 authors = ["ufoscout <ufoscout@gmail.com>"]
 edition = "2018"
+license = "MIT"
+description = "A CSS component library based on YEW"
+readme = "README.md"
+homepage = "https://github.com/ufoscout/cess"
+repository = "https://github.com/ufoscout/cess"
+keywords = ["yew", "css", "bulma"]
 
 [lib]
 crate-type = ["cdylib", "rlib"]
